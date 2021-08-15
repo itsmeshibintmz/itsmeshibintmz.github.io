@@ -10,4 +10,4 @@ You can find a step by step walkthrough in Neha Soni's Blog. Use the following l
 - Basic knowledge of CSS
 - Basic knowledge of JavaScript
 
-Credits: [!Neha Soni](https://twitter.com/nehasoni__) | [!LinkedIn](https://www.linkedin.com/in/neha-soni-70a6231b1/)
+Credits: [Neha Soni](https://twitter.com/nehasoni__) | [LinkedIn](https://www.linkedin.com/in/neha-soni-70a6231b1/)

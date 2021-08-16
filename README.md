@@ -1,4 +1,4 @@
-# itsmeshibintmz.github.io
+# itsmeshibintmz.github.io-image-search-api
 An amazing Image Search App using HTML, CSS, JavaScript, and Pexels API.
 
 You can find a step by step walkthrough in Neha Soni's Blog. Use the following linked image to navigate to her Blog.

@@ -62,6 +62,16 @@ body {
 [tabindex="-1"]:focus {
   outline: 0 !important; }
 
+#icon {
+  width: 30px;
+  cursor: pointer;
+}
+
+nav ul{
+  flex: 1;
+  text-align: right;
+}
+
 hr {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;

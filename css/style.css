@@ -9635,6 +9635,59 @@ textarea.form-control {
       color: #000000;
       font-style: italic; }
 
+.mantine-1cbwzgu {
+        display: flex;
+}
+
+.mantine-vhwwgo>* {
+  box-sizing: border-box;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+div {
+  display: block;
+}
+
+body {
+  font-family: Inter;
+  background-color: #1A1B1E;
+  color: #C1C2C5;
+  line-height: 1.55;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  -webkit-print-color-scheme: dark;
+  color-scheme: dark;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
 #ftco-loader {
   position: fixed;
   width: 96px;

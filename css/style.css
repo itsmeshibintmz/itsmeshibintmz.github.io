@@ -26,6 +26,8 @@
   --danger: #dc3545;
   --light: #f8f9fa;
   --dark: #343a40;
+  --primary-color: #edf2fc;
+  --secondary-color: #212121;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -61,6 +63,11 @@ body {
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
+
+#icon {
+  width: 30px;
+  cursor: pointer;
+}
 
 hr {
   -webkit-box-sizing: content-box;

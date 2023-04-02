@@ -1,86 +1,72 @@
-:root {
-  --background-color: #fff;
-  --text-color: #333;
+.toggle-container {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin: 0 10px;
 }
 
-:root[data-theme="dark"] {
-  --background-color: #333;
-  --text-color: #fff;
+.toggle-input {
+  display: none;
 }
 
-  body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-  }
-  
-  input[type="checkbox"] {
-    display: none;
-  }
-  
-  input[type="checkbox"]:checked + label {
-    color: var(--text-color);
-    background-color: var(--background-color);
-  }
-  
-  label {
-    display: inline-block;
-    padding: 6px 12px;
-    border-radius: 4px;
-    color: var(--background-color);
-    background-color: var(--text-color);
-    cursor: pointer;
-  }
-  
-  input[type="checkbox"] {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  label {
-    display: inline-block;
-    position: relative;
-    width: 60px;
-    height: 34px;
-    margin: 0 10px;
-    cursor: pointer;
-    user-select: none;
-  }
-  
-  label::before,
-  label::after {
-    content: "";
-    display: block;
-    position: absolute;
-    transition: all 0.3s ease;
-  }
-  
-  label::before {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 34px;
-    background-color: #ddd;
-  }
-  
-  label::after {
-    content: "";
-    top: 2px;
-    left: 2px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  }
-  
-  input[type="checkbox"]:checked + label::before {
-    background-color: #4CAF50;
-  }
-  
-  input[type="checkbox"]:checked + label::after {
-    transform: translateX(26px);
-  }
-  
+.toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: var(--background-color);
+  cursor: pointer;
+}
+
+.toggle-icon {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.toggle-input:checked + .toggle-label .toggle-icon {
+  transform: translateX(26px);
+  background-color: #333;
+}
+
+.toggle-input:checked + .toggle-label .toggle-icon:before {
+  content: '\f186';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+.toggle-input:checked + .toggle-label {
+  background-color: #333;
+}
+
+.toggle-input:checked + .toggle-label:before {
+  content: '\f185';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}

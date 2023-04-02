@@ -1,0 +1,35 @@
+:root {
+    --background-color: #fff;
+    --text-color: #333;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #333;
+      --text-color: #fff;
+    }
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  input[type="checkbox"]:checked + label {
+    color: var(--text-color);
+    background-color: var(--background-color);
+  }
+  
+  label {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: var(--background-color);
+    background-color: var(--text-color);
+    cursor: pointer;
+  }
+  

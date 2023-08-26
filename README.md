@@ -1,5 +1,5 @@
 # itsmeshibintmz.github.io
 
-![Badge](https://visitor-counter-badge.vercel.app/api/itsmeshibintmz/100-Days-of-Code-Mastering-Python)
+![Badge](https://visitor-counter-badge.vercel.app/api/itsmeshibintmz/itsmeshibintmz.github.io)
 
 my portfolio website

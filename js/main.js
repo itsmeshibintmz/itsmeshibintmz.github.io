@@ -440,3 +440,54 @@ $(function() {
 
 });
 
+// Enhanced scroll progress indicator
+window.addEventListener('DOMContentLoaded', function() {
+  // Create scroll progress bar
+  const progressBar = document.createElement('div');
+  progressBar.className = 'scroll-progress';
+  document.body.appendChild(progressBar);
+  
+  // Update progress on scroll
+  window.addEventListener('scroll', function() {
+    const scrollTop = window.pageYOffset;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    progressBar.style.width = scrollPercent + '%';
+  });
+  
+  // Enhanced fade-in animation for elements
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, observerOptions);
+  
+  // Observe all animated elements
+  document.querySelectorAll('.ftco-animate').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'all 0.6s ease';
+    observer.observe(el);
+  });
+});
+
+// Enhanced typing animation
+document.addEventListener('DOMContentLoaded', function() {
+  const textElement = document.querySelector('.slider-text h1');
+  if (textElement) {
+    textElement.style.opacity = '0';
+    setTimeout(() => {
+      textElement.style.opacity = '1';
+      textElement.style.animation = 'fadeInUp 1s ease-out';
+    }, 500);
+  }
+});
+

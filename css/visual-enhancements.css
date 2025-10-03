@@ -788,3 +788,235 @@ input:focus, textarea:focus, select:focus {
         display: none;
     }
 }
+
+/* ===== Additional Visual Polish ===== */
+
+/* Improved section transitions */
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add subtle background patterns */
+.ftco-section:nth-child(even) {
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+/* Enhanced image overlays */
+.img-about .overlay {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.7) 0%, rgba(118, 75, 162, 0.7) 100%);
+    transition: opacity 0.4s ease;
+}
+
+/* Improved text contrast on hero section */
+.hero-wrap .slider-text h1,
+.hero-wrap .slider-text h2,
+.hero-wrap .slider-text .subheading {
+    position: relative;
+    z-index: 2;
+}
+
+/* Enhanced download resume button */
+.btn-primary {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-primary:hover {
+    animation: pulse 1s ease-in-out infinite;
+}
+
+/* Smooth fade-in for sections */
+.ftco-animate {
+    animation-delay: 0.1s;
+}
+
+.ftco-animate:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.ftco-animate:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.ftco-animate:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+/* Enhanced heading underlines with gradient */
+.heading-section h2 {
+    background: linear-gradient(90deg, transparent 0%, rgba(102, 126, 234, 0.1) 50%, transparent 100%);
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+/* Improved progress bar labels */
+.progress-bar span {
+    background: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-weight: 700;
+}
+
+/* Enhanced social media partner section */
+.ftco-partner {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 50px 0;
+    position: relative;
+}
+
+.ftco-partner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(102, 126, 234, 0.3) 50%, transparent 100%);
+}
+
+/* Improved contact cards */
+.contact-info .box {
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-info .box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent 30%, rgba(102, 126, 234, 0.05) 50%, transparent 70%);
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+}
+
+.contact-info .box:hover::before {
+    left: 100%;
+}
+
+/* Enhanced navigation logo animation */
+@keyframes logoFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.navbar-brand:hover {
+    animation: logoFloat 2s ease-in-out infinite;
+}
+
+/* Improved mouse scroll indicator */
+.mouse-icon {
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 10px 8px;
+    transition: all 0.3s ease;
+}
+
+.mouse-icon:hover {
+    border-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+}
+
+/* Add glow effect to active elements */
+.nav-link.active,
+#navi ul li a.active {
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+}
+
+/* Enhanced project grid layout */
+.ftco-project .row {
+    gap: 0;
+}
+
+/* Smooth transitions for all interactive elements */
+button,
+a,
+input,
+select,
+textarea {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Improved focus states for accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid rgba(102, 126, 234, 0.5);
+    outline-offset: 2px;
+}
+
+/* Enhanced loader animation */
+#ftco-loader .circular {
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    100% { transform: rotate(360deg); }
+}
+
+/* Add depth to cards with layered shadows */
+.resume-wrap:hover,
+.box:hover {
+    box-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.05),
+        0 4px 8px rgba(0, 0, 0, 0.08),
+        0 8px 16px rgba(102, 126, 234, 0.15);
+}
+
+/* Improved text readability */
+p {
+    line-height: 1.8;
+    color: #4a5568;
+}
+
+/* Enhanced list items in about section */
+.about-info li span:first-child {
+    font-weight: 600;
+    color: #2d3748;
+    min-width: 120px;
+    display: inline-block;
+}
+
+/* Smooth gradient overlay for hero section */
+.hero-wrap::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.1));
+    pointer-events: none;
+}
+
+/* Add sparkle effect to heading decorations */
+@keyframes sparkle {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.1); }
+}
+
+.heading-section h2::after {
+    animation: sparkle 3s ease-in-out infinite;
+}
+
+/* Enhanced responsive typography */
+@media (max-width: 768px) {
+    .heading-section h2 {
+        font-size: 32px;
+    }
+    
+    .slider-text h1 {
+        font-size: 32px;
+    }
+    
+    .slider-text h2 {
+        font-size: 24px;
+    }
+}
